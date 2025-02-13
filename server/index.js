@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../client/dist", "index.html"));
 // }); //FOR DEPLOYMENT
 
-const PORT = 3000;
+const PORT = 4000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
