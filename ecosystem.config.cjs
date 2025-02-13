@@ -1,17 +1,13 @@
-// filepath: ecosystem.config.js
 module.exports = {
   apps: [
     {
-      name: "frontend",
-      cwd: "client", // Assuming your frontend is in the 'client' directory
+      name: "deploy",
       script: "npm",
-      args: "run dev", // Or 'start', depending on your frontend script
-    },
-    {
-      name: "backend",
-      cwd: "server", // Assuming your backend is in the 'server' directory or root
-      script: "node", // Or 'npm' if you use npm start
-      args: "index.js", // Replace with your main backend file
+      args: "run deploy",
+      cwd: ".", // Set the current working directory to the root of your project
+      env: {
+        NODE_ENV: "development",
+      },
     },
   ],
 };
